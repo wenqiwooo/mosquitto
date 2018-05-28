@@ -73,7 +73,9 @@ endif (${WITH_SOCKS} STREQUAL ON)
 
 option(WITH_SRV "Include SRV lookup support?" OFF)
 
-option(DOCUMENTATION "Build documentation?" ON)
+# Don't build documentation for macOS
+# https://github.com/eclipse/mosquitto/issues/461
+option(DOCUMENTATION "Build documentation?" OFF)
 
 # ========================================
 # Include projects
